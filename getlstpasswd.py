@@ -4,7 +4,7 @@ from urllib import request
 from bs4 import BeautifulSoup
 
 def getdata():
-	header={'User-Agent':'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36'}
+	header={'User-Agent':'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.117 Safari/537.36','Cache-Control':'no-cache'}
 	l_url = request.Request('http://www.ishadowsocks.org/',headers=header)
 	soup = BeautifulSoup(request.urlopen(l_url).read(), "html.parser")
 	free_section = soup.find("section",attrs={"id":"free"})
