@@ -1,5 +1,5 @@
 #http://tonkiang.us/hotellist.html
-
+rs = document.querySelectorAll('div.result')
 var s = '#EXTM3U'; 
 for (let i = 0; i < rs.length; i++) {
     if (rs[i].children.length>1) {
